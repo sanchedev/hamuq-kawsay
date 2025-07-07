@@ -389,6 +389,7 @@ animations = [{
 size = Vector2(11, 9)
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 255
 script = ExtResource("1_hss88")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -399,3 +400,7 @@ autoplay = "idle_down"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 11.5)
 shape = SubResource("RectangleShape2D_uf5tr")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
