@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=4 uid="uid://b5dxa2i5gsjd3"]
+[gd_scene load_steps=5 format=4 uid="uid://b5dxa2i5gsjd3"]
 
 [ext_resource type="TileSet" uid="uid://dnb0jiaudcysc" path="res://resources/tilesets/terrain.tres" id="1_bl13t"]
 [ext_resource type="PackedScene" uid="uid://cqdq26jj3jgsq" path="res://scenes/characters/player/player.tscn" id="2_bl13t"]
+[ext_resource type="PackedScene" uid="uid://dpmsnakpqpc8q" path="res://scenes/ui/buttons/pause/pause_button.tscn" id="3_iyx0m"]
+[ext_resource type="PackedScene" uid="uid://cu676toeh8qff" path="res://scenes/ui/bars/stamina/stamina_bar.tscn" id="4_74lek"]
 
 [node name="Test" type="Node2D"]
 
@@ -11,3 +13,29 @@ tile_set = ExtResource("1_bl13t")
 
 [node name="Player" parent="." instance=ExtResource("2_bl13t")]
 position = Vector2(35, 22)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseButton" parent="CanvasLayer" instance=ExtResource("3_iyx0m")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="StaminaBar" parent="CanvasLayer" node_paths=PackedStringArray("player") instance=ExtResource("4_74lek")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -80.0
+offset_right = 128.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+player = NodePath("../../Player")
