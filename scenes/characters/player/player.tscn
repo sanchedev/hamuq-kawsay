@@ -404,3 +404,9 @@ shape = SubResource("RectangleShape2D_uf5tr")
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
+
+[node name="StaminaTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="StaminaTimer" to="." method="_on_stamina_timer_timeout"]
