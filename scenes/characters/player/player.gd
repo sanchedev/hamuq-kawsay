@@ -55,7 +55,6 @@ func _physics_process(delta: float) -> void:
 			stamina = max_stamina
 		stamina_changing.emit(stamina, max_stamina)
 	elif stamina == max_stamina :
-		print(stamina_timer_playing)
 		if !stamina_timer_playing:
 			stamina_timer.start(0)
 			stamina_timer_playing = true

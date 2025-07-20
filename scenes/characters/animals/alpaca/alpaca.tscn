@@ -1,0 +1,178 @@
+[gd_scene load_steps=21 format=3 uid="uid://crrwyi0xc33oi"]
+
+[ext_resource type="Texture2D" uid="uid://daoyv8mwawadi" path="res://assets/characters/animals/alpaca/walk.png" id="1_h2tlb"]
+[ext_resource type="Script" uid="uid://cmvlunlhsd8nf" path="res://scenes/characters/animals/alpaca/alpaca.gd" id="1_vhri4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhri4"]
+atlas = ExtResource("1_h2tlb")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1twcm"]
+atlas = ExtResource("1_h2tlb")
+region = Rect2(350, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cr851"]
+atlas = ExtResource("1_h2tlb")
+region = Rect2(200, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojoqn"]
+atlas = ExtResource("1_h2tlb")
+region = Rect2(500, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_407dh"]
+atlas = ExtResource("1_h2tlb")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0pr3"]
+atlas = ExtResource("1_h2tlb")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1tbt"]
+atlas = ExtResource("1_h2tlb")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5kae"]
+atlas = ExtResource("1_h2tlb")
+region = Rect2(300, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mk3b"]
+atlas = ExtResource("1_h2tlb")
+region = Rect2(350, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iq7j8"]
+atlas = ExtResource("1_h2tlb")
+region = Rect2(400, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt08k"]
+atlas = ExtResource("1_h2tlb")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ley7s"]
+atlas = ExtResource("1_h2tlb")
+region = Rect2(200, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6q7mg"]
+atlas = ExtResource("1_h2tlb")
+region = Rect2(250, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nsbw3"]
+atlas = ExtResource("1_h2tlb")
+region = Rect2(450, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rno6w"]
+atlas = ExtResource("1_h2tlb")
+region = Rect2(500, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6p45"]
+atlas = ExtResource("1_h2tlb")
+region = Rect2(550, 0, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ieh7l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhri4")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1twcm")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cr851")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ojoqn")
+}],
+"loop": true,
+"name": &"idle_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_407dh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0pr3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1tbt")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5kae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mk3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iq7j8")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qt08k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ley7s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6q7mg")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsbw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rno6w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6p45")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_appif"]
+radius = 8.0
+
+[node name="Alpaca" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_vhri4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ieh7l")
+animation = &"idle_down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 14)
+shape = SubResource("CircleShape2D_appif")
+
+[node name="WalkingTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="WalkingTimer" to="." method="_on_walking_timer_timeout"]
